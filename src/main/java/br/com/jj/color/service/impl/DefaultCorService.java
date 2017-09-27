@@ -28,9 +28,9 @@ public class DefaultCorService implements CorService {
 	@Override
 	public boolean validarCor(String param) {
 		
-		String color = param.substring(2);
+		String color = param;
 		
-		if ( color.matches(decimal) || color.matches(hexa) ) {
+		if ( color.matches(decimal) || color.substring(2).matches(hexa) ) {
 			return true;
 		}
 		

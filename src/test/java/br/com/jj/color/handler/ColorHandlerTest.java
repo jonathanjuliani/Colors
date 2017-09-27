@@ -1,31 +1,24 @@
 package br.com.jj.color.handler;
 
-import static org.junit.Assert.fail;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.mock;
 
-import java.util.Scanner;
-
+import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
 
 public class ColorHandlerTest {
 	
-	@Mock
 	ColorHandler handler;
-
+	
+	@Before
+    public void init() {
+        handler = mock(ColorHandler.class);
+    }
+	
 	@Test
 	public void sucessoComHexaParaDecimalRGB888() {
 		
-		String[] args = null;
-		String expected = "255 255 255";
+		//TODO
 		
-		when(handler.getNextLine()).thenReturn("rgb888");
-		when(handler.getNextLine()).thenReturn("FFFF00");
-		
-		handler.main(args);
-		
-		
-		fail("Not yet implemented");
 	}
 	
 //	@Test

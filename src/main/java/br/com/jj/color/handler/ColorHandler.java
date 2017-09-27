@@ -18,20 +18,25 @@ public class ColorHandler {
 		while (true) {			
 			
 			System.out.println("Entre com o formato da cor (RGB888 ou RGB565):\n");
-			rgbFormat = getNextLine();
+			rgbFormat = getRgbFormat();
 			
 			System.out.println("Entre com a cor: \n");
-			color = getNextLine();
+			color = getColor();
 			
 			String result = parseColor(rgbFormat, color);
 			System.out.println(result);
 			break;
 		}
-		
-
 	}
 	
-	public static String getNextLine() {
+	@SuppressWarnings("resource")
+	public static String getRgbFormat() {
+		Scanner sc = new Scanner(System.in);
+		return sc.nextLine();
+	}
+	
+	@SuppressWarnings("resource")
+	public static String getColor() {
 		Scanner sc = new Scanner(System.in);
 		return sc.nextLine();
 	}
